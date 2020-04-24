@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 const getParamsId = () => {
     const params = useParams();
     return params.id
-}
+};
 
 export const TreeRootRouter = ({children}) => {
 

@@ -5,6 +5,7 @@ const sourceRoot = path.resolve(__dirname, 'src');
 const CSSSpritePlugin = require('css-sprite-loader').Plugin;
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const CompressionPlugin = require('compression-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     entry: sourceRoot + '/index.js',         //entryPoint to app to begin bilding
@@ -65,7 +66,7 @@ module.exports = {
                         loader: 'react-svg-loader',
                         options: {
                             svgo: {
-                                plugins: [{ removeTitle: false }],
+                                plugins: [{removeTitle: false}],
                                 floatPrecision: 2
                             }
                         }
@@ -80,7 +81,10 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         contentBase: path.join(__dirname, 'dist'),
-        host: '0.0.0.0'
+        host: '0.0.0.0',
+        compress: true,
+        inline: true,
+        hot: true,
     },
     plugins: [
         new CSSSpritePlugin({
@@ -99,5 +103,30 @@ module.exports = {
         new CompressionPlugin({
             cache: true,
         })
-    ]
+    ],
+    optimization: {
+        minimizer: [
+            new TerserPlugin({
+                parallel: true,
+                terserOptions: {
+                    ecma: 6
+                }
+            })
+        ],
+        runtimeChunk: 'single',
+        splitChunks: {
+            chunks: 'all',
+            maxInitialRequests: Infinity,
+            minSize: 0,
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name(module) {
+                        const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+                        return `npm.${packageName.replace('@', '')}`;
+                    }
+                }
+            }
+        }
+    }
 };

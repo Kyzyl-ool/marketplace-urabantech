@@ -45,7 +45,7 @@ const Header = () => {
     return (
         <div className="header">
             <Box fontSize="h6.fontSize">
-                <NavLink to="/main" style={{textDecoration: "none"}}><div className="prod-name">Startblock</div></NavLink>
+                <NavLink to="/main" style={{textDecoration: "none"}}><div className="prod-name">Chain++</div></NavLink>
             </Box>
             <div className="user-info">
                 <Select className={classes.combo}
