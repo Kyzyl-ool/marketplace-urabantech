@@ -198,7 +198,112 @@ export const products = [
         type: 'библиотека',
         company: "ООО Солярис"
     },
-]
+];
+
+export const developers = [
+    {
+        id: 0,
+        name: 'Дроздов Николай Константинович',
+        tariff: 'бессрочно',
+        price: 1000,
+        price2: 100,
+        avatarSrc: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200',
+        description: 'Опыт разработки: 12 лет. Работал в команде, TeamLead',
+        RAM: 2.7,
+        cores: 2,
+        performance: 2,
+        memory: 20,
+        keywords: ['IT', 'Backend', 'Flask'],
+        averageRate: 4,
+        type: 'библиотека',
+        company: "ООО Солярис"
+    },
+    {
+        id: 1,
+        name: 'David DeSandro',
+        tariff: 'бессрочно',
+        price: 2341,
+        price2: 1000,
+        avatarSrc: 'https://cloud.24ways.org/authors/daviddesandro280.jpg',
+        description: 'Worked as middle frontend-developer for 3 years. Have 10+ projects done.',
+        RAM: 5,
+        cores: 1,
+        performance: 1,
+        memory: 10,
+        keywords: ['Frontend', 'IT', 'React', 'Vue'],
+        averageRate: 4,
+        type: 'библиотека',
+        company: "Google"
+    },
+    {
+        id: 2,
+        name: 'Калягин Иван',
+        tariff: 'ежедневный',
+        price: 1000,
+        price2: 200,
+        avatarSrc: 'https://d38we5ntdyxyje.cloudfront.net/1335765/profile/UBUAADBC_avatar_medium_square.jpg',
+        description: 'Занимаюсь машинным обучением 2 года. Готов взяться за любое RnD решение. также предлагаю некоторые свои проекты для покупки (см. профиль)',
+        RAM: 1,
+        cores: 1,
+        performance: 1,
+        memory: 2,
+        keywords: ['ML', 'AI', 'Text Recognition', 'Algotrading'],
+        averageRate: 5,
+        type: 'продукт',
+        company: "Tinkoff"
+    },
+    {
+        id: 3,
+        name: 'Павлов Дмитрий',
+        tariff: 'бессрочно',
+        price: 1500,
+        price2: 0,
+        avatarSrc: 'https://avatars.sched.co/f/16/5055544/avatar.jpg?3c2',
+        description: 'Занимаюсь машинкой больше 5 лет. Предпочитаю работать в одиночку',
+        RAM: 2.7,
+        cores: 4,
+        performance: 2,
+        memory: 60,
+        keywords: ['AI', 'ML', 'CV', 'Python', 'C++'],
+        averageRate: 3,
+        type: 'библиотека',
+        company: "Royal Dutch shell (A)"
+    },
+    {
+        id: 4,
+        name: 'Андрей Павлов',
+        tariff: 'бессрочно',
+        price: 100000,
+        price2: 800,
+        avatarSrc: 'https://pbs.twimg.com/profile_images/1098525000/_avatarbig_400x400.jpeg',
+        description: 'Работаю frontend-разработчиком 1 год. Выполнил 5 проектов (см. профиль)',
+        RAM: 1,
+        cores: 1,
+        performance: 1,
+        memory: 10,
+        keywords: ['Frontend', 'JS', 'HTML', 'CSS', 'React'],
+        averageRate: 2,
+        type: 'библиотека',
+        company: "ООО Солярис"
+    },
+    {
+        id: 5,
+        name: 'Петров Игорь',
+        tariff: 'бессрочно',
+        price: 3000,
+        price2: 100,
+        avatarSrc: 'https://yt3.ggpht.com/a/AGF-l7_0hOupCneD2mC4JbiATdXtMysFkXWkkbeR4Q=s240-c-k-c0xffffffff-no-rj-mo',
+        description: 'Senior fullstack-разработчик. Занимаюсь разработкой 20 лет. Предпочитаю сразу качественно выполнять работу, без тестовых заданий',
+        RAM: 2.7,
+        cores: 2,
+        performance: 2,
+        memory: 20,
+        keywords: ['Fullstack', 'Frontend', 'Backend', 'System architect', 'Designer', 'Mathematics', 'UI/UX testing', 'ML', 'JS', 'Python', 'Go', 'C++', 'PHP', 'Angular', 'React', 'Vue', 'Svelte', 'Flask', 'DJango', 'nodeJS'],
+        averageRate: 4,
+        type: 'библиотека',
+        company: "Yandex"
+    }
+];
 
 // fake data generator
 const getItems = (count, offset = 0) => {

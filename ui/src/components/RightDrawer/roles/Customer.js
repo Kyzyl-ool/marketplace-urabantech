@@ -23,20 +23,20 @@ function Customer(props) {
                     <b>Фильтры:</b>
                 </Typography>
                 <Typography>
-                    Тип продукта:
+                    Уровень:
                 </Typography>
                 <Box ml={1}>
                     <FormGroup>
                         <FormControlLabel
                             control={<Checkbox checked={true}/>}
-                            label="Библиотека"
+                            label="Middle"
                             classes={{
                                 label: classes.checkBoxLabel
                             }}
                         />
                         <FormControlLabel
                             control={<Checkbox checked={true}/>}
-                            label="Коммерческое решение"
+                            label="Senior"
                             classes={{
                                 label: classes.checkBoxLabel
                             }}
@@ -45,7 +45,7 @@ function Customer(props) {
                             control={
                                 <Checkbox checked={true}/>
                             }
-                            label="Код"
+                            label="Higher"
                             classes={{
                                 label: classes.checkBoxLabel
                             }}
@@ -56,7 +56,7 @@ function Customer(props) {
             <br />
             <Box>
                 <Typography>
-                    Минимальная средняя оценка:
+                    Минимальная рейтинг:
                 </Typography>
                 <Rater />
             </Box>
@@ -69,7 +69,7 @@ function Customer(props) {
             </Box>
             <Box>
                 <Typography>
-                    Кол-во скачиваний:
+                    Минимальное кол-во заключенных контрактов:
                 </Typography>
                 <IntervalPicker/>
             </Box>

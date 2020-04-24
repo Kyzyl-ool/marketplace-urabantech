@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-const ProductCard = ({avatarSrc, description, price: cost, averageRate, type, keywords, company}) => {
+const ProductCardForDeveloper = ({avatarSrc, description, price: cost, averageRate, type, keywords, company}) => {
     const classes = useStyles();
 
     return (
@@ -43,7 +43,7 @@ const ProductCard = ({avatarSrc, description, price: cost, averageRate, type, ke
                         <Box mx={1}>
                             <Box mx={1} mb={1}>
                                 <Typography>
-                                    <b>Краткое резюме:</b>
+                                    <b>Описание:</b>
                                 </Typography>
                                 <Box>
                                     <Typography variant={"body2"}>
@@ -64,12 +64,12 @@ const ProductCard = ({avatarSrc, description, price: cost, averageRate, type, ke
                                 <b>Стоимость:</b>
                             </Typography>
                             <Typography variant={"h5"}>
-                                {cost} ₽/час
+                                {cost} ₽
                             </Typography>
                         </Box>
                         <Box>
                             <Typography>
-                                <b>Рейтинг:</b>
+                                <b>Ср. оценка:</b>
                             </Typography>
                             <Typography variant={"h5"}>
                                 {averageRate}/5
@@ -79,7 +79,7 @@ const ProductCard = ({avatarSrc, description, price: cost, averageRate, type, ke
                 </Box>
                 <Box>
                     <Typography>
-                        Навыки:
+                        Требуемые компетенции
                     </Typography>
                     <Box p={1} display={'flex'} flexWrap={'wrap'} >
                         {
@@ -94,7 +94,7 @@ const ProductCard = ({avatarSrc, description, price: cost, averageRate, type, ke
     );
 };
 
-ProductCard.propTypes = {
+ProductCardForDeveloper.propTypes = {
     id: PropTypes.number,
     avatarSrc: PropTypes.string,
     description: PropTypes.string,
@@ -104,4 +104,4 @@ ProductCard.propTypes = {
     keywords: PropTypes.arrayOf(PropTypes.string)
 };
 
-export default ProductCard;
+export default ProductCardForDeveloper;

@@ -10,6 +10,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import FullScreenDialog from "../dialog/Dialog";
 import Button from "@material-ui/core/Button/Button";
 import {products} from "../../pages/integrator-workshop/example";
+import ProductCardForDeveloper from "../ProductCardForDeveloper/ProductCardForDeveloper";
 
 const stubData = products
 
@@ -69,7 +70,7 @@ const ListOfProductsForDeveloper = () => {
             {
                 stubData.map((value, index) => (
                     <NavLink to={`product/${value.id}`} key={index} style={{textDecoration: 'none'}}>
-                        <ProductCard
+                        <ProductCardForDeveloper
                             {...value}
                         />
                     </NavLink>))

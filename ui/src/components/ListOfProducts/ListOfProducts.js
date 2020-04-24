@@ -7,7 +7,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import {Search} from "@material-ui/icons";
 import {NavLink} from "react-router-dom";
 import ProductCard from "../ProductCard/ProductCard";
-import {products} from "../../pages/integrator-workshop/example";
+import {developers, products} from "../../pages/integrator-workshop/example";
 import Button from "@material-ui/core/Button/Button";
 
 // const stubData = [
@@ -45,14 +45,15 @@ import Button from "@material-ui/core/Button/Button";
 //     }
 // ]
 
-const stubData = products
+const stubData = developers;
+
 
 const ListOfProducts = () => {
     return (
         <>
             <Box display="flex" m={1}>
                 <FormControl fullWidth={true}>
-                    <InputLabel htmlFor="input-with-icon-adornment">Поиск продуктов:</InputLabel>
+                    <InputLabel htmlFor="input-with-icon-adornment">Поиск исполнителей:</InputLabel>
                     <Input style={{marginTop: "8px"}}
                            id="input-with-icon-adornment"
                            startAdornment={

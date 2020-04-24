@@ -36,7 +36,7 @@ function valuetext(value) {
 function PricePicker(props) {
     const classes = useStyles()
 
-    const [value, setValue] = React.useState([100, 300000]);
+    const [value, setValue] = React.useState([500, 10000]);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);

@@ -57,8 +57,8 @@ const Header = () => {
                         onChange={handleChange}
                 >
                     <MenuItem value={"developer"}>Разработчик</MenuItem>
-                    <MenuItem value={"customer"}>Покупатель</MenuItem>
-                    <MenuItem value={"integrator"}>Заказчик</MenuItem>
+                    <MenuItem value={"customer"}>Заказчик</MenuItem>
+                    {/*<MenuItem value={"integrator"}>Заказчик</MenuItem>*/}
                 </Select>
                 <div className="user-name">Анна Чухнина</div>
                 <img className="user-photo" src={User}/>
