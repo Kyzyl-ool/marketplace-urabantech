@@ -9,7 +9,6 @@ const getParamsId = () => {
 };
 
 export const TreeRootRouter = ({children}) => {
-
     return <Box>
         <Switch>
             {
